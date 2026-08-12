@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ct8fqnb3jivyw"]
+
+[ext_resource type="Script" uid="uid://bwrh36jycv0h8" path="res://vehicle/vehicle.gd" id="1_mhs70"]
+
+[node name="Node3D" type="Node3D" unique_id=589736108]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1211781028]
+script = ExtResource("1_mhs70")
