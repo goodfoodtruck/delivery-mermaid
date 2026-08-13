@@ -1,8 +1,30 @@
 [gd_scene format=3 uid="uid://ct8fqnb3jivyw"]
 
 [ext_resource type="Script" uid="uid://bwrh36jycv0h8" path="res://vehicle/vehicle.gd" id="1_mhs70"]
+[ext_resource type="Script" uid="uid://ceihq05upkrk0" path="res://vehicle/components/vehicle_steering.gd" id="2_1ktiy"]
+[ext_resource type="Script" uid="uid://btjlitwim3y2e" path="res://vehicle/components/vehicle_engine.gd" id="3_vg162"]
+[ext_resource type="Script" uid="uid://cvyoijmpnysav" path="res://vehicle/controllers/vehicle_controller.gd" id="4_vp2eu"]
+[ext_resource type="Script" uid="uid://dd5fqxmfpx8t0" path="res://vehicle/controllers/player_controller.gd" id="5_raajb"]
 
 [node name="Node3D" type="Node3D" unique_id=589736108]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1211781028]
 script = ExtResource("1_mhs70")
+
+[node name="Components" type="Node" parent="CharacterBody3D" unique_id=806908837]
+
+[node name="VehicleSteering" type="Node" parent="CharacterBody3D/Components" unique_id=1029865755]
+script = ExtResource("2_1ktiy")
+
+[node name="VehicleEngine" type="Node" parent="CharacterBody3D/Components" unique_id=971924741]
+script = ExtResource("3_vg162")
+
+[node name="Controllers" type="Node" parent="CharacterBody3D" unique_id=1344128078]
+
+[node name="VehicleController" type="Node" parent="CharacterBody3D/Controllers" unique_id=1212694984]
+script = ExtResource("4_vp2eu")
+metadata/_custom_type_script = "uid://cvyoijmpnysav"
+
+[node name="PlayerController" type="Node" parent="CharacterBody3D/Controllers/VehicleController" unique_id=1259797669]
+script = ExtResource("5_raajb")
+metadata/_custom_type_script = "uid://dd5fqxmfpx8t0"
