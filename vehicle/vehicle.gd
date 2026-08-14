@@ -6,8 +6,10 @@ var _controller: VehicleController
 @onready var engine: VehicleEngine = $Components/VehicleEngine
 
 
-func _init(controller: VehicleController) -> void:
-	_controller = controller
+static func create(controller: VehicleController) -> Vehicle:
+	var vehicle: Vehicle = preload("res://vehicle/vehicle.tscn").instantiate()
+	vehicle._controller = controller
+	return vehicle
 
 
 func _physics_process(delta: float) -> void:

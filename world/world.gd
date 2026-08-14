@@ -9,6 +9,10 @@ extends Node
 
 
 func _ready() -> void:
+	var vehicle = Vehicle.create(PlayerController.new())
+	add_child(vehicle)
+	
+	
 	var rng := RandomNumberGenerator.new()
 	rng.seed = seed_value
 
