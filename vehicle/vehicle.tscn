@@ -25,9 +25,14 @@ mesh = ExtResource("2_kuhha")
 
 [node name="VehicleSteering" type="Node" parent="Components" unique_id=1029865755]
 script = ExtResource("2_1ktiy")
+_max_steering_angle_deg = 90.0
 
 [node name="VehicleEngine" type="Node" parent="Components" unique_id=971924741]
 script = ExtResource("3_vg162")
+acceleration = 30.0
+deceleration = 40.0
+engine_drag = 10.0
+max_speed = 70.0
 
 [node name="Controllers" type="Node" parent="." unique_id=1344128078]
 

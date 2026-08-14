@@ -10,9 +10,9 @@ const FOV_SMOOTH_FACTOR = 0.2
 const FOV_CHANGE_MIN_SPEED = 0.05
 
 @export var min_distance := 2.0
-@export var max_distance := 4.0
+@export var max_distance := 5.0
 @export var angle_v_adjust := 0.0
-@export var height := 1.5
+@export var height := 2
 
 var initial_transform := transform
 
