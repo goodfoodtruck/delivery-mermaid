@@ -21,5 +21,6 @@ func _physics_process(delta: float) -> void:
 	rotate_y(steering.get_yaw_delta(delta, engine.speed, engine.max_speed))
 	
 	velocity = -global_basis.z * engine.speed
+	velocity += get_gravity()
 	
 	move_and_slide()
